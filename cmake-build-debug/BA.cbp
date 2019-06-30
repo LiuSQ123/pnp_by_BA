@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="BA"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\Sophus\;CMake Files\..\..\Sophus\build\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/liushiqi/ClionProjects/BA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/liushiqi/ClionProjects/BA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/liushiqi/ClionProjects/BA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BA">
+				<Option output="/home/liushiqi/ClionProjects/BA/cmake-build-debug/BA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/liushiqi/ClionProjects/BA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/liushiqi/ClionProjects/BA/include"/>
+					<Add directory="/home/liushiqi/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/home/liushiqi/catkin_ws/devel/include"/>
+					<Add directory="/opt/ros/indigo/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 BA"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BA/fast">
+				<Option output="/home/liushiqi/ClionProjects/BA/cmake-build-debug/BA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/liushiqi/ClionProjects/BA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/liushiqi/ClionProjects/BA/include"/>
+					<Add directory="/home/liushiqi/Sophus"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/home/liushiqi/catkin_ws/devel/include"/>
+					<Add directory="/opt/ros/indigo/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 BA/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/liushiqi/ClionProjects/BA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/main.cpp">
+			<Option target="BA"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../../../usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../../../usr/lib/cmake/eigen3/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/liushiqi/ClionProjects/BA/../../Sophus/build/SophusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\Sophus\build\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

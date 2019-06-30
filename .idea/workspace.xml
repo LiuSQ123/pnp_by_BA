@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="BA" targetName="BA" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" BUILD_OPTIONS="-j 2" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="977da1b7-f4fe-4168-9233-a6ae810c0424" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/fast/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fast/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/fast/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/fast/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/fastConfig.cmake.in" beforeDir="false" afterPath="$PROJECT_DIR$/fast/fastConfig.cmake.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/include/fast/corner_10.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/corner_10.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/include/fast/corner_9.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/corner_9.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/include/fast/fast.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/fast.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/include/fast/faster_corner_utilities.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/faster_corner_utilities.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fast/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/src/fast_10.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/fast_10.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/src/fast_10_score.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/fast_10_score.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/src/faster_corner_10_sse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/faster_corner_10_sse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/src/nonmax_3x3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/nonmax_3x3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/test/data/test1.png" beforeDir="false" afterPath="$PROJECT_DIR$/fast/test/data/test1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/test/test.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-release/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="786495338">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.0" value="14" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="7892" />
+          <entry key="txt" value="243" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="243" />
+          <entry key="Doxygen file" value="16" />
+          <entry key="ObjectiveC" value="7876" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Core" value="2" />
+          <entry key="h" value="4" />
+          <entry key="hpp" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ObjectiveC" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="14" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="244" column="35" lean-forward="true" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
+              <folding>
+                <element signature="e#470#1376#0" />
+                <element signature="e#1377#2097#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>block</find>
+      <find>2*size_P</find>
+      <find>outimg1</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/fast" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1853" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BA" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.BA">
+    <configuration name="BA" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BA" TARGET_NAME="BA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BA" RUN_TARGET_NAME="BA">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.BA" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="977da1b7-f4fe-4168-9233-a6ae810c0424" name="Default Changelist" comment="" />
+      <created>1543456952294</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543456952294</updated>
+      <workItem from="1543456954192" duration="26583000" />
+      <workItem from="1543549510473" duration="13526000" />
+      <workItem from="1543637557371" duration="33715000" />
+      <workItem from="1543716072948" duration="12372000" />
+      <workItem from="1543818276867" duration="346000" />
+      <workItem from="1543818658881" duration="108000" />
+      <workItem from="1544260053980" duration="765000" />
+      <workItem from="1544260917248" duration="619000" />
+      <workItem from="1544334365987" duration="3177000" />
+      <workItem from="1544340250810" duration="639000" />
+      <workItem from="1544343990373" duration="1064000" />
+      <workItem from="1544363755911" duration="1994000" />
+      <workItem from="1544455945781" duration="718000" />
+      <workItem from="1544535225384" duration="603000" />
+      <workItem from="1544967290658" duration="821000" />
+      <workItem from="1545081207663" duration="743000" />
+      <workItem from="1545477857847" duration="657000" />
+      <workItem from="1554281168749" duration="1134000" />
+      <workItem from="1561351978987" duration="58000" />
+      <workItem from="1561352044753" duration="71000" />
+      <workItem from="1561712904536" duration="139000" />
+      <workItem from="1561785515348" duration="2929000" />
+      <workItem from="1561862449411" duration="599000" />
+      <workItem from="1561870855404" duration="1198000" />
+      <workItem from="1561903528012" duration="4230000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="108808000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1770891" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31567568" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49971956" weight="0.36432433" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50028044" side_tool="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32864866" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///usr/local/include/opencv2/calib3d.hpp" />
+    <entry file="file:///usr/local/include/eigen3/Eigen/Core" />
+    <entry file="file://$USER_HOME$/Sophus/sophus/se3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="69" column="2" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/eigen3/Eigen/src/Core/Product.h" />
+    <entry file="file://$PROJECT_DIR$/include/fast/fast.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="244" column="35" lean-forward="true" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
+          <folding>
+            <element signature="e#470#1376#0" />
+            <element signature="e#1377#2097#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

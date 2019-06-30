@@ -1,0 +1,3 @@
+/home/liushiqi/ClionProjects/BA/build/CMakeFiles/rebuild_cache.dir
+/home/liushiqi/ClionProjects/BA/build/CMakeFiles/BA.dir
+/home/liushiqi/ClionProjects/BA/build/CMakeFiles/edit_cache.dir
