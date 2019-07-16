@@ -1,15 +1,16 @@
 #include <vector>
 #include <iostream>
 #include <stdio.h>
+
 #include <opencv2/imgproc.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
+
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include "sophus/se3.h"
-#include <opencv2/viz/vizcore.hpp>
 using namespace cv;
 using namespace std;
 // 相机内参
@@ -100,31 +101,31 @@ Eigen::MatrixXd findWholeJacobian(Eigen::MatrixXd x)
         ans.block(i*2,6+3*i,2,3)=findPointJacobian(Pose,x.block(6+3*i,0,3,1));
     }
     //std::cout<<"--DEBUG--"<<"findWholeJacobian end"<<std::endl;
+    //std::cout<<"J = "<<endl<<ans<<endl;
     return ans;
 }
 /***
  *
  * @param x 状态量
- * @param v_Point2D 当前帧下的特征点坐标
- * @return f(x) 的值
+ * @param v_Point2D 观测到特征点的像素坐标
+ * @return f(x)
  */
 Eigen::Matrix<double ,Eigen::Dynamic,1> findCostFunction(Eigen::MatrixXd x, std::vector<cv::Point2d> v_Point2D)
 {
     //e=u-K*T*P; u为图像上的观测坐标,K为相机内参,T为相机外参，P为3D点坐标;
-    //costFunction n*1 维
     double fx=camMatrix(0,0);
     double fy=camMatrix(1,1);
     double cx=camMatrix(0,2);
     double cy=camMatrix(1,2);
     Eigen::Matrix<double ,Eigen::Dynamic,1> ans;
-    //把李代数转化为矩阵 Pose为变换矩阵
+
     int size_P=(int)(x.rows()-6)/3;
 
     if(size_P!=v_Point2D.size()){
         std::cout<<"---ERROR---"<<endl;
         return ans;
     }
-
+    //把李代数转化为矩阵 Pose为变换矩阵
     Eigen::VectorXd v_temp(6);
     v_temp=x.block(0,0,6,1);
     Sophus::SE3 SE3_temp=Sophus::SE3::exp(v_temp);
@@ -138,12 +139,13 @@ Eigen::Matrix<double ,Eigen::Dynamic,1> findCostFunction(Eigen::MatrixXd x, std:
         Point(1,0)=x(1+6+i*3,0);
         Point(2,0)=x(2+6+i*3,0);
         Point(3,0)=1.0;
+        //计算e
         Eigen::Matrix<double ,4,1>  cam_Point=Pose*Point; //计算3D点在相机坐标系下的坐标
         double cam_x=cam_Point(0,0); //相机坐标喜下3D点的坐标
         double cam_y=cam_Point(1,0);
         double cam_z=cam_Point(2,0);
-        ans(2*i,  0) =v_Point2D[i].x-((fx*cam_x)/cam_z)-cx;
-        ans(2*i+1,0) =v_Point2D[i].y-((fy*cam_y)/cam_z)-cy;
+        ans(2*i,  0) = v_Point2D[i].x-((fx*cam_x)/cam_z)-cx ;
+        ans(2*i+1,0) = v_Point2D[i].y-((fy*cam_y)/cam_z)-cy ;
     }
     return ans;
 }
@@ -152,7 +154,6 @@ Eigen::Matrix<double ,Eigen::Dynamic,1> findCostFunction(Eigen::MatrixXd x, std:
  * @param v_P3d 一组匹配成功的3D点坐标
  * @param v_P2d 3D坐标点在某帧下的坐标
  * @param t     迭代的初值(4x4矩阵)
- * @param ans   输出的变换矩阵结果
  */
 void bundleAdjustment(std::vector<cv::Point3d> v_P3d,std::vector<cv::Point2d> v_P2d,Eigen::Matrix<double,4,4> T,cv::Mat img){
     std::cout<<"Do BA by yourself, v1.0"<<std::endl;
@@ -173,17 +174,20 @@ void bundleAdjustment(std::vector<cv::Point3d> v_P3d,std::vector<cv::Point2d> v_
         //cout<<"x:"<<v_P3d[i].x<<",y:"<<v_P3d[i].y<<",z:"<<v_P3d[i].z<<endl;
     }
 
-    for(int i=0;i<MAX_LOOP;i++){ //循环求解BA
+    for(int i=1;i<=MAX_LOOP;i++){ //循环求解BA
+        std::cout<<"\033[32m"<<"Doing BA Please wait......"<<std::endl;
         double t = (double)cv::getTickCount(); //计时开始
         Eigen::MatrixXd Jacobian=findWholeJacobian(x);       //求解状态x的Jacobian
         Eigen::MatrixXd JacobianT=Jacobian.transpose();      //求解Jacobian 的转置
         Eigen::MatrixXd H=JacobianT*Jacobian;                //求解H矩阵
+        //std::cout<<"H = "<<endl<<H<<endl;
         Eigen::MatrixXd fx=findCostFunction(x,v_P2d);        //求解f(x)在状态x下的值
         Eigen::VectorXd g=-1*JacobianT*fx;                   //求解g,相见<十四讲>p247
         //求解delt_x
         //1.Using the SVD decomposition
         //Eigen::MatrixXd delt_x=H.bdcSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(g);
         //2.Using the QR decomposition
+        std::cout<<"Solving ......"<<"\033[37m"<<std::endl;
         Eigen::MatrixXd delt_x=H.colPivHouseholderQr().solve(g);
         ///李代数相加需要添加一些余项，转化为R再相乘，代替加法,详见14讲 72页；
         ///把SE3上的李代数转化为4x4矩阵
@@ -225,9 +229,12 @@ void bundleAdjustment(std::vector<cv::Point3d> v_P3d,std::vector<cv::Point2d> v_
             cv::circle(temp_Mat,temp_Point2d,3,cv::Scalar(0,0,255),2);
             cv::circle(temp_Mat,v_P2d[j],    2,cv::Scalar(255,0,0),2);
         }
-        imshow("1",temp_Mat);
+        imshow("REPROJECTION ERROR DISPLAY",temp_Mat);
+        cout<<"\033[32m"<<"Iteration： "<<i<<" Finish......"<<"\033[37m"<<endl;
+        cout<<"\033[32m"<<"Blue is observation......"<<"\033[37m"<<endl;
+        cout<<"\033[32m"<<"Red is reprojection......"<<"\033[37m"<<endl;
+        cout<<"\033[32m"<<"Press Any Key to continue......"<<"\033[37m"<<endl;
         cv::waitKey(0);
-
     }
 }
 void show(){
@@ -235,6 +242,13 @@ void show(){
 }
 
 int main (int argc, char * argv[]) {
+    if(argc!=4) {
+        cout<<"\033[31m"<<"INPUT ERROR !"<<"\033[32m"<<"Please Input Like: 1.png 2.png 3.png  --(1 is the first image,2 is the second ,3 is depth image)"<<"\033[37m"<<endl;
+        return -1;
+    }
+    string imag1 = argv[1];
+    string imag2 = argv[2];
+    string imag3 = argv[3];
     //-- 设置相机内参
     camMatrix(0,0)=525.0;
     camMatrix(1,1)=525.0;
@@ -242,9 +256,9 @@ int main (int argc, char * argv[]) {
     camMatrix(1,2)=239.5;
     camMatrix(2,2)=1.0;
     //-- 读取图像
-    Mat img_1 = imread ( "11.png");
-    Mat img_2 = imread ( "33.png");
-    Mat img_depth = imread("111.png");
+    Mat img_1 = imread (imag1);
+    Mat img_2 = imread (imag2);
+    Mat img_depth = imread(imag3);
     //-- 初始化
     std::vector<KeyPoint> keypoints_1, keypoints_2;
     Mat descriptors_1, descriptors_2;
@@ -299,7 +313,7 @@ int main (int argc, char * argv[]) {
     for ( int i = 0; i < ( int ) good_matches.size(); i++ )
     {
         ///
-        if(img_depth.at<ushort>(keypoints_1[good_matches[i].queryIdx].pt)!=0 &&
+        if(img_depth.at<ushort>(keypoints_1[good_matches[i].queryIdx].pt)/5000!=0 &&
          !isnan( img_depth.at<ushort>(keypoints_1[good_matches[i].queryIdx].pt)) &&
          !isinf( img_depth.at<ushort>(keypoints_1[good_matches[i].queryIdx].pt)))
         {
@@ -312,14 +326,14 @@ int main (int argc, char * argv[]) {
             double  u=keypoints_1[good_matches[i].queryIdx].pt.x;
             double v=keypoints_1[good_matches[i].queryIdx].pt.y;
             temp.z=img_depth.at<ushort>(keypoints_1[good_matches[i].queryIdx].pt)/5000;
-            if(temp.z==0) temp.z = 1;
+            //if(temp.z==0) temp.z = 1;
             temp.x=(u-camMatrix(0,2))*temp.z/camMatrix(0,0);
             temp.y=(v-camMatrix(1,2))*temp.z/camMatrix(1,1);
             v_3DPoints.emplace_back(temp);
         }
     }
-    cout<<"points1.size:"<<points1.size()<<endl;
-    cout<<"points2.size:"<<points2.size()<<endl;
+    //cout<<"points1.size:"<<points1.size()<<endl;
+    //cout<<"points2.size:"<<points2.size()<<endl;
     cout<<"v_3DPoints.size:"<<v_3DPoints.size()<<endl;
     //使用OpenCV提供的代数方法求解：2D-2D
     Point2d principal_point ( 319.5, 239.5);	//相机光心, TUM dataset标定值

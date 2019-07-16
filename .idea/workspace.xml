@@ -12,21 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="977da1b7-f4fe-4168-9233-a6ae810c0424" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/fast/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fast/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/fast/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/fast/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/fastConfig.cmake.in" beforeDir="false" afterPath="$PROJECT_DIR$/fast/fastConfig.cmake.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/include/fast/corner_10.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/corner_10.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/include/fast/corner_9.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/corner_9.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/include/fast/fast.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/fast.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/include/fast/faster_corner_utilities.h" beforeDir="false" afterPath="$PROJECT_DIR$/fast/include/fast/faster_corner_utilities.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fast/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/src/fast_10.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/fast_10.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/src/fast_10_score.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/fast_10_score.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/src/faster_corner_10_sse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/faster_corner_10_sse.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/src/nonmax_3x3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/src/nonmax_3x3.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/test/data/test1.png" beforeDir="false" afterPath="$PROJECT_DIR$/fast/test/data/test1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fast/test/test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/BA" beforeDir="false" afterPath="$PROJECT_DIR$/build/BA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/BA.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/BA.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BA" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BA.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BA.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BA.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BA.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/fast/corner_10.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/fast/corner_9.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/fast/fast.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/fast/faster_corner_utilities.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libfast.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -41,31 +41,31 @@
     <session id="786495338">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
-          <entry key="project.open.time.0" value="14" />
+          <entry key="project.closed" value="26" />
+          <entry key="project.open.time.0" value="17" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="7892" />
-          <entry key="txt" value="243" />
+          <entry key="cpp" value="8415" />
+          <entry key="txt" value="245" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="243" />
+          <entry key="CMakeLists.txt" value="245" />
           <entry key="Doxygen file" value="16" />
-          <entry key="ObjectiveC" value="7876" />
+          <entry key="ObjectiveC" value="8399" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="14" selection-end-column="65" />
+            <state relative-caret-position="133">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -96,12 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="244" column="35" lean-forward="true" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
-              <folding>
-                <element signature="e#470#1376#0" />
-                <element signature="e#1377#2097#0" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -113,16 +109,17 @@
       <find>block</find>
       <find>2*size_P</find>
       <find>outimg1</find>
+      <find>findCostFunction</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/fast" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -132,7 +129,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="1853" />
@@ -150,6 +147,11 @@
             <path>
               <item name="BA" type="b2602c69:ProjectViewProjectNode" />
               <item name="BA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BA" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,7 +179,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.BA">
-    <configuration name="BA" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BA" TARGET_NAME="BA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BA" RUN_TARGET_NAME="BA">
+    <configuration name="BA" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="11.png 33.png 111.png" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BA" TARGET_NAME="BA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BA" RUN_TARGET_NAME="BA">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -226,12 +228,17 @@
       <workItem from="1561785515348" duration="2929000" />
       <workItem from="1561862449411" duration="599000" />
       <workItem from="1561870855404" duration="1198000" />
-      <workItem from="1561903528012" duration="4230000" />
+      <workItem from="1561903528012" duration="4875000" />
+      <workItem from="1561956084112" duration="4511000" />
+      <workItem from="1562812170837" duration="299000" />
+      <workItem from="1562813783252" duration="1000" />
+      <workItem from="1563246875101" duration="4885000" />
+      <workItem from="1563254345607" duration="128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108808000" />
+    <option name="totallyTimeSpent" value="119277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -242,13 +249,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31567568" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28216216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49971956" weight="0.36432433" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49971956" weight="0.5372973" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50028044" side_tool="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -276,28 +283,18 @@
       </provider>
     </entry>
     <entry file="file:///usr/local/include/eigen3/Eigen/src/Core/Product.h" />
-    <entry file="file://$PROJECT_DIR$/include/fast/fast.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fast/fast.h" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="14" selection-end-column="65" />
+        <state relative-caret-position="133">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="244" column="35" lean-forward="true" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
-          <folding>
-            <element signature="e#470#1376#0" />
-            <element signature="e#1377#2097#0" />
-          </folding>
+        <state relative-caret-position="209">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
