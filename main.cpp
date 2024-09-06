@@ -95,14 +95,17 @@ Eigen::MatrixXd findWholeJacobian(Eigen::MatrixXd x)
     v_temp=x.block(0,0,6,1);
     Sophus::SE3<double> SE3_temp=Sophus::SE3<double>::exp(v_temp);
     Eigen::Matrix<double,4,4> Pose = SE3_temp.matrix();
+    std::cout<<"size_P="<<size_P<<std::endl;//65
     for(int i=0;i<size_P;i++){
         //Block of size (p,q), starting at (i,j)
         //matrix.block(i,j,p,q)->针对动态矩阵,matrix.block<p,q>(i,j)->针对静态矩阵
         ans.block(2*i,0,2,6)=findPoseJacobian(Pose,x.block(6+3*i,0,3,1));
         ans.block(i*2,6+3*i,2,3)=findPointJacobian(Pose,x.block(6+3*i,0,3,1));
     }
-    //std::cout<<"--DEBUG--"<<"findWholeJacobian end"<<std::endl;
-    //std::cout<<"J = "<<endl<<ans<<endl;
+
+    std::cout<<"--DEBUG--"<<"findWholeJacobian end"<<std::endl;
+    std::cout<<"J.cols() = "  <<ans.cols()<<endl;
+    std::cout<<"J.rows() = "<<ans.rows()<<endl;
     return ans;
 }
 /***
