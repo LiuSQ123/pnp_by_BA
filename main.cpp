@@ -104,8 +104,9 @@ Eigen::MatrixXd findWholeJacobian(Eigen::MatrixXd x)
     }
 
     std::cout<<"--DEBUG--"<<"findWholeJacobian end"<<std::endl;
-    std::cout<<"J.cols() = "  <<ans.cols()<<endl;
     std::cout<<"J.rows() = "<<ans.rows()<<endl;
+    std::cout<<"J.cols() = "  <<ans.cols()<<endl;
+    
     return ans;
 }
 /***
