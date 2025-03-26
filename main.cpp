@@ -10,7 +10,8 @@
 
 #include <Eigen/Core>
 #include <Eigen/Dense>
-#include "sophus/se3.h"
+// #include "sophus/se3.h"
+#include <sophus/se3.hpp>
 using namespace cv;
 using namespace std;
 // 相机内参
@@ -92,16 +93,20 @@ Eigen::MatrixXd findWholeJacobian(Eigen::MatrixXd x)
     ans.setZero();
     Eigen::VectorXd v_temp(6);
     v_temp=x.block(0,0,6,1);
-    Sophus::SE3 SE3_temp=Sophus::SE3::exp(v_temp);
+    Sophus::SE3<double> SE3_temp=Sophus::SE3<double>::exp(v_temp);
     Eigen::Matrix<double,4,4> Pose = SE3_temp.matrix();
+    std::cout<<"size_P="<<size_P<<std::endl;//65
     for(int i=0;i<size_P;i++){
         //Block of size (p,q), starting at (i,j)
         //matrix.block(i,j,p,q)->针对动态矩阵,matrix.block<p,q>(i,j)->针对静态矩阵
         ans.block(2*i,0,2,6)=findPoseJacobian(Pose,x.block(6+3*i,0,3,1));
         ans.block(i*2,6+3*i,2,3)=findPointJacobian(Pose,x.block(6+3*i,0,3,1));
     }
-    //std::cout<<"--DEBUG--"<<"findWholeJacobian end"<<std::endl;
-    //std::cout<<"J = "<<endl<<ans<<endl;
+
+    std::cout<<"--DEBUG--"<<"findWholeJacobian end"<<std::endl;
+    std::cout<<"J.rows() = "<<ans.rows()<<endl;
+    std::cout<<"J.cols() = "  <<ans.cols()<<endl;
+    
     return ans;
 }
 /***
@@ -128,7 +133,7 @@ Eigen::Matrix<double ,Eigen::Dynamic,1> findCostFunction(Eigen::MatrixXd x, std:
     //把李代数转化为矩阵 Pose为变换矩阵
     Eigen::VectorXd v_temp(6);
     v_temp=x.block(0,0,6,1);
-    Sophus::SE3 SE3_temp=Sophus::SE3::exp(v_temp);
+    Sophus::SE3<double> SE3_temp=Sophus::SE3<double>::exp(v_temp);
     Eigen::Matrix<double,4,4> Pose = SE3_temp.matrix();
 
     ans.resize(2*size_P,1);
@@ -163,7 +168,7 @@ void bundleAdjustment(std::vector<cv::Point3d> v_P3d,std::vector<cv::Point2d> v_
     //状态量x初始化
     Eigen::Matrix<double ,3,3> R=T.block<3,3>(0,0);
     Eigen::Matrix<double ,3,1> t=T.block<3,1>(0,3);
-    Sophus::SE3 XI(R,t);//位姿->ξ
+    Sophus::SE3<double> XI(R,t);//位姿->ξ
     //cout<<"位姿："<<XI.log().transpose()<<endl;
     x.block(0,0,6,1)=XI.log();       //位姿的李代数
     for(int i=0;i<v_P3d.size();i++){ //3D点坐标
@@ -191,12 +196,12 @@ void bundleAdjustment(std::vector<cv::Point3d> v_P3d,std::vector<cv::Point2d> v_
         Eigen::MatrixXd delt_x=H.colPivHouseholderQr().solve(g);
         ///李代数相加需要添加一些余项，转化为R再相乘，代替加法,详见14讲 72页；
         ///把SE3上的李代数转化为4x4矩阵
-        Eigen::Matrix4d Pos_Matrix = Sophus::SE3::exp(x.block(0,0,6,1)).matrix();
-        Eigen::Matrix4d Pos_update_Matrix = Sophus::SE3::exp(delt_x.block(0,0,6,1)).matrix();
+        Eigen::Matrix4d Pos_Matrix = Sophus::SE3<double>::exp(x.block(0,0,6,1)).matrix();
+        Eigen::Matrix4d Pos_update_Matrix = Sophus::SE3<double>::exp(delt_x.block(0,0,6,1)).matrix();
         ///矩阵更新
         Pos_Matrix = Pos_Matrix * Pos_update_Matrix;
         ///转化为李代数
-        Sophus::SE3 new_Pos_se = Sophus::SE3(Pos_Matrix.block<3,3>(0,0),Pos_Matrix.block<3,1>(0,3));
+        Sophus::SE3<double> new_Pos_se = Sophus::SE3<double>(Pos_Matrix.block<3,3>(0,0),Pos_Matrix.block<3,1>(0,3));
         ///更新姿态
         x = x + delt_x;
         x.block(0,0,6,1)=new_Pos_se.log();
@@ -204,7 +209,7 @@ void bundleAdjustment(std::vector<cv::Point3d> v_P3d,std::vector<cv::Point2d> v_
         //--------------------在原图相上画出观测和预测的坐标-------------------------------------
         Eigen::VectorXd v_temp(6);
         v_temp=x.block(0,0,6,1);
-        Sophus::SE3 SE3_temp=Sophus::SE3::exp(v_temp);
+        Sophus::SE3<double> SE3_temp=Sophus::SE3<double>::exp(v_temp);
         Eigen::Matrix<double,4,4> Pose = SE3_temp.matrix();
         cout<<"POSE:"<<endl<<Pose<<endl;
         cv::Mat temp_Mat=img.clone();
